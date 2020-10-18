@@ -2,4 +2,7 @@
 <p><%= @book.title %></p>
 <h2>Body</h2>
 <p><%= @book.body %></p>
-
+<h4>
+  <%= link_to "Edit", edit_book_path(@book) %>|<!--@モデル名で現在参照しているデータにとぶ-->
+  <%= link_to "Back", new_book_path %>  <!--rake routes でurlがわかる-->
+</h4>
