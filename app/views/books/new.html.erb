@@ -6,7 +6,11 @@
   </tr>
   <% @books.each do |book| %>
     <tr>
-      <th><%= puts [book.title] %></th>
+      <td><%= @book.title %></td>
+      <td><%= @book.body %></td>
+      <td><%= f.submit 'show' %></td>
+      <td><%= "showbot" %></td>
+      <td><%= "showbot" %></td>
     </tr>
   <% end %>
 </table>
