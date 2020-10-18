@@ -1,9 +1,16 @@
 <h1>Books</h1>
-<div>
-  <h1>Title</h1>
-  <h1>Body</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>body</th>
+  </tr>
+  <% @books.each do |book| %>
+    <tr>
+      <th><%= puts [book.title] %></th>
+    </tr>
+  <% end %>
+</table>
 
-</div>
 
 <h1>New book</h1>
 
