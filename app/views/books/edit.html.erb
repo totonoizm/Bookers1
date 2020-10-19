@@ -1,5 +1,14 @@
 <Strong>Editing Book</Strong>
-
+  <% if @book.errors.any? %>
+    <div class="alert alert-warning">
+      <ul>
+        <%= @book.errors.count %>errors prohibited this book from being saved
+        <% @book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 <%= form_with model:@book, local: true do |f| %>
   <h3>Title</h3>
   <%= f.text_field :title %>
