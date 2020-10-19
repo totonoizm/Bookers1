@@ -2,6 +2,9 @@
 <html>
  <head>
     <%= csrf_meta_tags %>
+    <%=   flash[:notice]  %>
+    <%=   flash[:delete]  %>
+    <%=   flash[:update]  %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
