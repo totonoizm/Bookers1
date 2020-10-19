@@ -28,6 +28,12 @@ class BooksController < ApplicationController
     redirect_to book_path(book.id)
   end
 
+  def destroy
+    book = Book.find(params[:id])
+    book.destroy
+    redirect_to new_book_path
+  end
+
   private
   def book_params
     params.require(:book).permit(:title, :body)
