@@ -17,9 +17,9 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     if @book.save
       flash[:notice] = "Book was successfully created."
-      redirect_to book_path(@book.id)
+      redirect_to book_path(@book.id)#redirect_toはrouteを見にいく※更新するのと一緒
     else
-      render 'new'
+      render 'new'#renderは設定したアクション内しか見ない※現在持っているデータを維持する
     end
   end
 
