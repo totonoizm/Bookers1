@@ -1,8 +1,6 @@
-<h2>Title</h2>
-<p><%= @book.title %></p>
-<h2>Body</h2>
-<p><%= @book.body %></p>
-<h4>
+<p><strong>Title: </strong><%= @book.title %></p> <!--cssでmarginとるか-->
+<p><strong>Body: </strong><%= @book.body %></p>
+<p>
   <%= link_to "Edit", edit_book_path(@book) %>|<!--@モデル名で現在参照しているデータにとぶ-->
   <%= link_to "Back", books_path %>  <!--rake routes でurlがわかる-->
-</h4>
+</p>
