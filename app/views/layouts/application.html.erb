@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Bookers</title>
+ <head>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <div class="update">
+      <%=   flash[:notice]  %>
+      <%=   flash[:update]  %>
+    </div>
+    <div class="alert">
+      <%=   flash[:alert]  %>
+    </div>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
