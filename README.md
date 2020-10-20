@@ -1,7 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Bookers
+DMM WEBCAMPの3-8演習課題提出用リポジトリです。
+
 
 Things you may want to cover:
 
