@@ -1,6 +1,6 @@
-<Strong>Editing Book</Strong>
+<h1>Editing Book</h1>
   <% if @book.errors.any? %>
-    <div class="alert alert-warning">
+    <div class="alert-message">
       <ul>
         <%= @book.errors.count %>errors prohibited this book from being saved
         <% @book.errors.full_messages.each do |message| %>
@@ -9,16 +9,24 @@
       </ul>
     </div>
   <% end %>
-<%= form_with model:@book, local: true do |f| %>
-  <h3>Title</h3>
-  <%= f.text_field :title %>
-  <h3>Body</h3>
-  <%= f.text_area :body %>
-
-  <%= f.submit 'Update Book' %>
-  <h4>
-    <%= link_to "Show", book_path(@book) %>|<!--@モデル名で現在参照しているデータにとぶ-->
-    <%= link_to "Back", books_path %>  <!--rake routes でurlがわかる-->
-  </h4>
-
-<% end %>
+<div>
+  <%= form_with model:@book, local: true do |f| %>
+    <div>
+      <p>Title</p>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <p>Body</p>
+      <%= f.text_area :body %>
+    </div>
+    <div class=switch>
+      <%= f.submit 'Update Book' %>
+    </div>
+    <div>
+      <p>
+        <%= link_to "Show", book_path(@book) %> |<!--@モデル名で現在参照しているデータにとぶ-->
+        <%= link_to "Back", books_path %>  <!--rake routes でurlがわかる-->
+      </p>
+    </div>
+  <% end %>
+</div>
